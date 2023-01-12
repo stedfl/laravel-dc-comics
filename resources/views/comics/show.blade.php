@@ -7,7 +7,7 @@
             <div class="card-body p-4">
                 <h5 class="card-title fw-bold text-center">{{$comic->title}}</h5>
                 <h6 class="mt-3 fw-semibold">Description:</h6>
-                <p class="card-text">{{$comic->description}}</p>
+                <p class="card-text">{!!$comic->description!!}</p>
                 <ul>
                     <li><span class="fw-semibold">Series:</span>  {{$comic->series}}</li>
                     <li><span class="fw-semibold">Price:</span> {{$comic->price}}</li>

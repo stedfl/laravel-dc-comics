@@ -3,6 +3,11 @@
 @section('content')
     <main>
         <div class="container py-5">
+            <div class="title d-flex justify-content-between align-items-baseline mb-4">
+                <h1>Comics List</h1>
+                <a class="btn btn-info" href="{{route('comic.create')}}"><i class="fa-solid fa-plus"></i> New Comic</a>
+            </div>
+
             <table class="table table-striped table-primary">
                 <thead>
                   <tr>
