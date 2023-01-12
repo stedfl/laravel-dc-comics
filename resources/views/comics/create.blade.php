@@ -15,7 +15,7 @@
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
-                <input type="number" class="form-control" name="price" id="price" placeholder="Comic Price">
+                <input type="number" step="0.01" class="form-control" name="price" id="price" placeholder="Comic Price">
             </div>
             <div class="mb-3">
                 <label for="Sale Date" class="form-label">Sale Date</label>

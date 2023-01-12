@@ -22,7 +22,7 @@
                         <tr>
                             <th scope="row">{{$comic->id}}</th>
                             <td>{{$comic->title}}</td>
-                            <td>{{$comic->price}}</td>
+                            <td>$ {{$comic->price}}</td>
                             <td>
                                 <a class="btn btn-primary" href="{{route('comic.show', $comic)}}"><i class="fa-solid fa-eye"></i></a>
                                 <a class="btn btn-warning" href=""><i class="fa-solid fa-pen"></i></i></a>

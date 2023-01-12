@@ -10,7 +10,7 @@
                 <p class="card-text">{!!$comic->description!!}</p>
                 <ul>
                     <li><span class="fw-semibold">Series:</span>  {{$comic->series}}</li>
-                    <li><span class="fw-semibold">Price:</span> {{$comic->price}}</li>
+                    <li><span class="fw-semibold">Price: </span>${{$comic->price}}</li>
                     <li><span class="fw-semibold">Date of Sale:</span> {{$comic->sale_date}}</li>
                     <li><span class="fw-semibold">Type:</span> {{$comic->type}}</li>
                 </ul>
