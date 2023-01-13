@@ -65,7 +65,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -77,7 +77,15 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $comic_form = $request->all();
+        if($comic_form['title']!= $comic->title) {
+            $comic_form['slug'] = Comic::generateSlug($comic_form['title']);
+        } else {
+            $comic_form['slug'] = $comic->slug;
+        }
+
+        $comic->update($comic_form);
+        return redirect()->route('comic.show', $comic);
     }
 
     /**

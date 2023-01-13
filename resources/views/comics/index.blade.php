@@ -26,7 +26,7 @@
                             <td>
                                 <a class="btn btn-primary" title="show" href="{{ route('comic.show', $comic) }}"><i
                                         class="fa-solid fa-eye"></i></a>
-                                <a class="btn btn-warning" title="edit" href=""><i
+                                <a class="btn btn-warning" title="edit" href="{{route('comic.edit', $comic)}}"><i
                                         class="fa-solid fa-pen"></i></i></a>
                                 <a class="btn btn-danger" title="delete" href=""><i
                                         class="fa-solid fa-trash-can"></i></i></a>
