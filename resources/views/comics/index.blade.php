@@ -26,10 +26,18 @@
                             <td>
                                 <a class="btn btn-primary" title="show" href="{{ route('comic.show', $comic) }}"><i
                                         class="fa-solid fa-eye"></i></a>
-                                <a class="btn btn-warning" title="edit" href="{{route('comic.edit', $comic)}}"><i
+                                <a class="btn btn-warning" title="edit" href="{{ route('comic.edit', $comic) }}"><i
                                         class="fa-solid fa-pen"></i></i></a>
-                                <a class="btn btn-danger" title="delete" href=""><i
-                                        class="fa-solid fa-trash-can"></i></i></a>
+
+
+                                <form class="d-inline" action="{{ route('comic.destroy', $comic) }}" method="POST"
+                                    onsubmit="return confirm('Do you confirm to delete {{ $comic->title }}?')">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger" title="delete" type="submit">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
