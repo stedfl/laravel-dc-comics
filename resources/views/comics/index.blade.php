@@ -7,6 +7,11 @@
                 <h1>Comics List</h1>
                 <a class="btn btn-info" href="{{ route('comic.create') }}"><i class="fa-solid fa-plus"></i> New Comic</a>
             </div>
+            @if (session('is_deleted'))
+                <div class="alert alert-danger" role="alert">
+                    {{ session('is_deleted') }}
+                </div>
+            @endif
             <span class="fst-italic">Results: {{ $comics->total() }}</span>
             <table class="table table-striped table-primary mt-2">
                 <thead>
