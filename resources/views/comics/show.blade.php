@@ -16,6 +16,12 @@
                 </ul>
             </div>
         </div>
-        <a href="{{ route('home') }}" class="btn btn-primary m-4">Go To Comics List</a>
+        <div class="actions my-4">
+            <a href="{{ route('home') }}" class="btn btn-primary">Go To Comics List</a>
+            <a class="btn btn-warning" title="edit" href="{{ route('comic.edit', $comic) }}"><i
+                class="fa-solid fa-pen"></i></i></a>
+             @include('partials.delete-form', $comic)
+        </div>
+
     </div>
 @endsection

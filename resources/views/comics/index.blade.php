@@ -34,15 +34,8 @@
                                 <a class="btn btn-warning" title="edit" href="{{ route('comic.edit', $comic) }}"><i
                                         class="fa-solid fa-pen"></i></i></a>
 
+                              @include('partials.delete-form', $comic)
 
-                                <form class="d-inline" action="{{ route('comic.destroy', $comic) }}" method="POST"
-                                    onsubmit="return confirm('Do you confirm to delete {{ $comic->title }}?')">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="btn btn-danger" title="delete" type="submit">
-                                        <i class="fa-solid fa-trash-can"></i>
-                                    </button>
-                                </form>
                             </td>
                         </tr>
                     @endforeach

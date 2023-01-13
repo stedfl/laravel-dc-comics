@@ -3,7 +3,7 @@
 @section('content')
     <main>
         <div class="container py-4 w-50">
-            <form action={{ route('comic.update', $comic) }} method="POST">
+            <form class="d-inline" action={{ route('comic.update', $comic) }} method="POST">
                 @csrf
                 @method('PUT')
                 <div class="mb-3">
@@ -45,6 +45,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            @include('partials.delete-form', $comic)
         </div>
 
     </main>
