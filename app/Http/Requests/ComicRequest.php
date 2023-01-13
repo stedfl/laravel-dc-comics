@@ -24,11 +24,11 @@ class ComicRequest extends FormRequest
     public function rules()
     {
         return [
-            'title'=>'required|min:2|max:100',
-            'price'=>'required|decimal:2',
-            'series'=>'required|min:2|max:100',
-            'sale_date'=>'required|date_format:Y-m-d',
-            'type'=>'required|min:2|max:50'
+            'title' => 'required|min:2|max:100',
+            'price' => 'required|decimal:2',
+            'series' => 'required|min:2|max:100',
+            'sale_date' => 'required|date_format:Y-m-d',
+            'type' => 'required|min:2|max:50'
         ];
     }
 

@@ -79,7 +79,7 @@ class ComicController extends Controller
     public function update(ComicRequest $request, Comic $comic)
     {
         $comic_form = $request->all();
-        if($comic_form['title']!= $comic->title) {
+        if ($comic_form['title'] != $comic->title) {
             $comic_form['slug'] = Comic::generateSlug($comic_form['title']);
         } else {
             $comic_form['slug'] = $comic->slug;

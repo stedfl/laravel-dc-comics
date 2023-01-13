@@ -18,9 +18,10 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Title</th>
-                        <th scope="col"><i class="fa-solid fa-sack-dollar"></i> Price</th>
-                        <th scope="col"><i class="fa-solid fa-calendar-days"></i>  Last modification  <i class="fa-solid fa-clock"></i></th>
-                        <th scope="col">Action</th>
+                        <th scope="col">Price <i class="fa-solid fa-sack-dollar"></i></th>
+                        <th scope="col"><i class="fa-solid fa-calendar-days"></i> Last modification <i
+                                class="fa-solid fa-clock"></i></th>
+                        <th scope="col">Action <i class="fa-solid fa-hand"></i></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,7 +37,7 @@
                                 <a class="btn btn-warning" title="edit" href="{{ route('comic.edit', $comic) }}"><i
                                         class="fa-solid fa-pen"></i></i></a>
 
-                              @include('partials.delete-form', $comic)
+                                @include('partials.delete-form', $comic)
 
                             </td>
                         </tr>

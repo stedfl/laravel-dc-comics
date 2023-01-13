@@ -28,3 +28,13 @@ header {
         }
     }
 }
+
+nav ul.pagination .page-link.active,
+.active > .page-link {
+    background-color: #303030;
+    border-color: #303030;
+}
+
+nav .sd-container ul.pagination.sd-pagination {
+    color: #303030;
+}

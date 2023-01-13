@@ -21,7 +21,7 @@
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Title *</label>
                     <input type="text" class="form-control @error('title') is-invalid @enderror" name="title"
-                        id="title" placeholder="Comic Title" value="{{ old('title', $comic->title)}}">
+                        id="title" placeholder="Comic Title" value="{{ old('title', $comic->title) }}">
                     @error('title')
                         <span class="invalid-feedback">
                             {{ $message }}
@@ -40,7 +40,8 @@
                         <span class="input-group-text" id="basic-addon1">$</span>
                         <div class="w-100">
                             <input type="number" step="0.01" class="form-control @error('price') is-invalid @enderror"
-                                name="price" id="price" placeholder="Comic Price" value="{{ old('price', $comic->price) }}">
+                                name="price" id="price" placeholder="Comic Price"
+                                value="{{ old('price', $comic->price) }}">
                             @error('price')
                                 <span class="invalid-feedback">
                                     {{ $message }}
