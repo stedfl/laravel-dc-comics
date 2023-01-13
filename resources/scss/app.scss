@@ -23,5 +23,8 @@ header {
             max-width: 100%;
             object-fit: cover;
         }
+        .card-body {
+            min-width: 500px;
+        }
     }
 }
