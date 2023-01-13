@@ -44,7 +44,7 @@ class ComicRequest extends FormRequest
             'series.min' => 'Series requires at least 2 characters',
             'series.max' => 'Series requires maximum 100 characters',
             'sale_date.required' => 'A sale date is required ',
-            'sale_date.date' => 'Sale date requires date format YYY-MM-DD ',
+            'sale_date.date_format' => 'Sale date requires date format YYY-MM-DD ',
             'type.required' => 'A type is required ',
             'type.min' => 'Type requires at least 2 characters',
             'type.max' => 'Type requires maximum 50 characters',

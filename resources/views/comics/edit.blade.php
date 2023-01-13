@@ -86,6 +86,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
             @include('partials.delete-form', $comic)
+            <a href="{{ route('home') }}" class="btn btn-success">Go To Comics List</a>
         </div>
 
     </main>

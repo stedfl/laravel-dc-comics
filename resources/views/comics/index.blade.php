@@ -18,7 +18,8 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Title</th>
-                        <th scope="col">Price</th>
+                        <th scope="col"><i class="fa-solid fa-sack-dollar"></i> Price</th>
+                        <th scope="col"><i class="fa-solid fa-calendar-days"></i>  Last modification  <i class="fa-solid fa-clock"></i></th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -28,6 +29,7 @@
                             <th scope="row">{{ $comic->id }}</th>
                             <td>{{ $comic->title }}</td>
                             <td>$ {{ $comic->price }}</td>
+                            <td> {{ $comic->updated_at }}</td>
                             <td>
                                 <a class="btn btn-primary" title="show" href="{{ route('comic.show', $comic) }}"><i
                                         class="fa-solid fa-eye"></i></a>

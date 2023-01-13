@@ -82,6 +82,7 @@
                     <textarea class="form-control" name="description" id="description" placeholder="Comic Description"rows="3">{{ old('description') }}</textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="{{ route('home') }}" class="btn btn-success">Go To Comics List</a>
             </form>
         </div>
 
