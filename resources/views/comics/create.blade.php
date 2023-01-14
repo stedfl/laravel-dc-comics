@@ -29,8 +29,14 @@
                 </div>
                 <div class="mb-3">
                     <label for="image" class="form-label">Image</label>
-                    <input type="text" class="form-control" name="thumb" id="thumb" placeholder="Comic Image Url"
+                    <input type="text" class="form-control @error('thumb') is-invalid @enderror " name="thumb" id="thumb" placeholder="Comic Image Url"
                         value="{{ old('thumb') }}">
+                    @error('thumb')
+                        <span class="invalid-feedback">
+                            {{ $message }}
+                        </span>
+                    @enderror
+
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Price *</label>
@@ -48,8 +54,8 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="Sale Date" class="form-label">Sale Date *</label>
-                    <input type="text" class="form-control @error('price') is-invalid @enderror" name="sale_date"
+                    <label for="sale date" class="form-label">Sale Date *</label>
+                    <input type="text" class="form-control @error('sale_date') is-invalid @enderror" name="sale_date"
                         id="sale_date" placeholder="Comic Sale Date" value="{{ old('sale_date') }}">
                     @error('sale_date')
                         <span class="invalid-feedback">
@@ -79,7 +85,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" id="description" placeholder="Comic Description"rows="3">{{ old('description') }}</textarea>
+                    <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description"
+                        placeholder="Comic Description"rows="3">{{ old('description') }}</textarea>
+                    @error('description')
+                        <span class="invalid-feedback">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <a href="{{ route('home') }}" class="btn btn-success">Go To Comics List</a>
